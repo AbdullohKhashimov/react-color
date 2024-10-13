@@ -1,0 +1,38 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.input-container .label-title {
+  color: rgb(23, 17, 17);
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+  justify-content: center;
+  text-align: center;
+}
+
+.input-container .item-input {
+  display: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 50px;
+  border: none;
+  box-shadow: 6px 6px 20px #aba1a1;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.input-container .item-input[type="text"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  font-size: 20px;
+}
