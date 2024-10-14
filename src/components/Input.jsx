@@ -1,8 +1,10 @@
 import React from "react";
 import "../css/input.css";
+import colorNames from "colornames";
 
 const Input = (props) => {
-  const { colorValue, setColorValue, setHexValue } = props;
+  const { colorValue, setColorValue, setHexValue, isDarkText, setIsDarkText } =
+    props;
   return (
     <div className="input-container">
       <form onSubmit={(e) => e.preventDefault()}>
@@ -15,10 +17,17 @@ const Input = (props) => {
           value={colorValue}
           onChange={(e) => {
             setColorValue(e.target.value);
-            setHexValue(e.target.value);
+            setHexValue(colorNames(e.target.value));
           }}
           className="item-input"
         />
+        <button
+          type="button"
+          className="toggle-btn"
+          onClick={() => setIsDarkText(!isDarkText)}
+        >
+          Toggle Text Color
+        </button>
       </form>
     </div>
   );
